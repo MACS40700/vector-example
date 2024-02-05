@@ -191,7 +191,7 @@ ggplot() + # set up basic plot (don't specify data b/c using two data sources)
             colour = "white", size = 0.01, alpha = 0.2) + # room to improve aesthetically
   coord_sf() 
 
-ggsave("il_counties_cities.png")
+ggsave("images/il_counties_cities.png")
 ```
 
 ## LET'S SEE HOW FAR WE CAN TAKE THIS! Switzerland
