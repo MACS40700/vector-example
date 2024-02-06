@@ -215,15 +215,13 @@ lake_geo <- read_sf("data/input/g2s15.shp")
 municipality_prod_geo <- read_sf("data/input/gde-1-1-15.shp")
 
 # read in raster of relief
-# download relief file
-download.file(url = "https://uchicago.box.com/s/in3x4am7rrigxeha695fje5fg4eo2khd", 
-              destfile = "data/input/02-relief-ascii.asc")
-relief <- raster("data/input/02-relief-ascii.asc") %>%
+# download relief file here: "https://uchicago.box.com/s/in3x4am7rrigxeha695fje5fg4eo2khd" 
+#relief <- raster("data/input/02-relief-ascii.asc") %>%
   # hide relief outside of Switzerland by masking with country borders
-  mask(country_geo) %>%
-  as("SpatialPixelsDataFrame") %>%
-  as.data.frame() %>%
-  rename(value = `X02.relief.ascii`)
+#  mask(country_geo) %>%
+#  as("SpatialPixelsDataFrame") %>%
+#  as.data.frame() %>%
+#  rename(value = `X02.relief.ascii`)
 
 # clean up
 rm(country_geo)
