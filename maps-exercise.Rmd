@@ -295,8 +295,7 @@ ggplot(
   data = municipality_prod_geo
 ) +
     # raster comes as the first layer, municipalities on top
-    geom_raster(
-      data = relief, aes( x = x,   y = y,  alpha = value  ) ) +
+    # geom_raster(data = relief, aes( x = x,   y = y,  alpha = value  ) ) +
     # use the "alpha hack"
     scale_alpha(name = "", range = c(0.6, 0), guide = "none")  + 
   geom_sf(
@@ -393,14 +392,8 @@ map <- ggplot(
   data = municipality_prod_geo
   ) +
   # first: draw the relief
-  geom_raster(
-    data = relief,
-    aes(
-      x = x,
-      y = y,
-      alpha = value
-    )
-  ) +
+  # geom_raster(data = relief,
+  #  aes(x = x, y = y, alpha = value)) +
   # use the "alpha hack" (as the "fill" aesthetic is already taken)
   scale_alpha(name = "",
               range = c(0.6, 0),
@@ -538,14 +531,8 @@ map_a <- ggplot(
   data = municipality_prod_geo
   ) +
   # first: draw the relief
-  geom_raster(
-    data = relief,
-    aes(
-      x = x,
-      y = y,
-      alpha = value
-    )
-  ) +
+  # geom_raster(data = relief,
+  #  aes(x = x, y = y, alpha = value)) +
   # use the "alpha hack" (as the "fill" aesthetic is already taken)
   scale_alpha(name = "",
               range = c(0.6, 0),
